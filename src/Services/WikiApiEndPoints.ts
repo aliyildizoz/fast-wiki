@@ -1,25 +1,3 @@
-/*
-***** Not:&redirects= bu propu her zaman kullan.(sayfanın adını vs her şeye duyarsız yapar)***
-
-    1)Main Image
-        - bu url ile sayfadaki resimlerin adları vedosya uzantıları alıyoruz (burada döndürülen resimler içinde ana sayfa ilgili olan resim için arama gerekli).
-            https://en.wikipedia.org/w/api.php?action=query&titles="Buraya sayfanın adı geliyor."&format=json&prop=images
-        - bu url ile yukarıdaki resimlerin her birinin urlini adını yazarak alıyoruz
-            https://en.wikipedia.org/w/api.php?action=query&format=json&titles=File:"Buraya resmin adı geliyor"&prop=imageinfo&iiprop=url
-        
-        - İkinci yol olarak direkt buradan resimi getirebiliriz (en iyi çözüm)
-            https://en.wikipedia.org/w/api.php?action=query&titles=ali&prop=pageimages&format=json&piprop=original 
-    2)Summary
-
-        - exchars: döndürülecek karekter sayısı
-        - exsentences:döndürülecek cümle sayısı(kullanılabilir)
-        - exintro:bunu kullanmazsak tüm sayfayı getirir.(exsentences=5) bununla kullanırsak özeti olmayan içeriklerde gelir. 
-            https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&titles="burada sayfanın adı gelir"&redirects=&exsentences=10
-        
-        - Sayfa getirirken önce buraya istek atılıp en uygun başlığa sahip olan sayfa  getirilip onun üzerinden yukarıdaki işlem yapılır. 
-            https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=&list=search&srsearch=Diyarbak%C4%B1r%20castle&srlimit=50&origin=* 
-
-*/
 export default class WikiApiEndPoints {
 
     ApiUrl: string

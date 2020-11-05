@@ -3,7 +3,6 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import IWikipediaService from '../Services/IWikipediaService'
 import Search from '../Components/Search'
 import Content from '../Components/Content'
-import { Link } from 'react-router-dom'
 
 interface IProps {
     route?: any

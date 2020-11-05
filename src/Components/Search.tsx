@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import SearchModel from '../Models/SearchModel';
 import IWikipediaService from '../Services/IWikipediaService';
