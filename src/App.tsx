@@ -10,7 +10,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Home from './Components/Home';
 
 const Header = React.memo(() => {
-  alert("cas")
   return <Container>
     <Row>
       <Col >
