@@ -1,25 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import WikipediaService from './Services/WikipediaService';
+import {
+  BrowserRouter,
+  Switch,
+  Route
+} from "react-router-dom";
+import { Col, Container, Row } from 'react-bootstrap';
+import Home from './Components/Home';
+
+const Header = React.memo(() => {
+  alert("cas")
+  return <Container>
+    <Row>
+      <Col >
+        <hr />
+        <h1 className="font-weight-lighter text-center" >Welcome to <b style={{ fontFamily: "-moz-initial", fontSize: "1.5em", color: "GrayText" }}>Fast Wiki</b></h1>
+        <hr />
+      </Col>
+    </Row>
+  </Container>
+})
 
 function App() {
+  let wikiService = new WikipediaService();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Header />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/:title" render={(route) => <Home route={route} WikiService={wikiService} />} />
+          <Route path="/" render={(route) => <Home route={route} WikiService={wikiService} />} />
+        </Switch>
+      </BrowserRouter>
+    </div >
   );
 }
 
