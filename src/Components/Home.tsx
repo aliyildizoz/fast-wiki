@@ -15,6 +15,8 @@ interface IState {
 export default class Home extends Component<IProps, IState> {
     state = {}
 
+   
+
     render() {
         const wikiService = this.props.WikiService;
         const history = this.props.route.history;
@@ -23,7 +25,7 @@ export default class Home extends Component<IProps, IState> {
             <Container className="mb-5">
                 <Row className="mb-3">
                     <Col md="2">
-                        <GoBackButton className="float-right" goBack={history.goBack} />
+                        <GoBackButton className="float-left mb-2 " goBack={history.goBack} />
                     </Col>
                     <Col md={{ span: 6, offset: 1 }} >
                         <Search wikiService={wikiService} history={history} />

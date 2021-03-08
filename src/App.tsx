@@ -23,7 +23,6 @@ const Header = React.memo(() => {
 
 function App() {
   let wikiService = new WikipediaService();
-
   return (
     <div className="App">
       <Header />

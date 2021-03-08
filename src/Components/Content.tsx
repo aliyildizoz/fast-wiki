@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect,  useRef, useState } from "react";
+import React, { FunctionComponent, useEffect, useRef, useState } from "react";
 import { Badge, Card, Col, Row } from "react-bootstrap";
 import { useParams } from "react-router";
 import PageResponse from "../Models/PageResponse";
@@ -13,9 +13,9 @@ const Content: FunctionComponent<{ wikiService: IWikipediaService }> = ({ wikiSe
     const [pageResponse, setPageResponse] = useState<PageResponse>(new PageResponse())
     useEffect(() => {
         const current = sumRef.current;
-         var res = new PageResponse();
-                setPageResponse(res)
-                if (current) {
+        var res = new PageResponse();
+        setPageResponse(res)
+        if (current) {
             current.innerHTML = "<i>Loading...</i>"
             if (title) {
                 wikiService.Find(decodeURIComponent(title).replaceAll("_", " ")).then((res: PageResponse) => {
@@ -30,7 +30,7 @@ const Content: FunctionComponent<{ wikiService: IWikipediaService }> = ({ wikiSe
 
                 })
             } else {
-               
+
                 current.innerHTML = "<i>Please search for something.</i>"
             }
         }
@@ -39,9 +39,9 @@ const Content: FunctionComponent<{ wikiService: IWikipediaService }> = ({ wikiSe
 
     return (
         <Row className="pl-0">
-            <Col md="8" >
+            <Col md="8" sm="12" className="mt-2">
                 <Card>
-                    <Card.Header as="h5" className="bg-info text-light ">Summary</Card.Header>
+                    <Card.Header as="h5" className="bg-info text-light">Summary</Card.Header>
                     <Card.Body >
                         {!pageResponse.IsExistsMatch ? "" : <Card.Title as="h5" className="text-center">{pageResponse.PageModel.Title}</Card.Title>}
                         <p className="card-text text-justify font-weight-normal" ref={sumRef}></p>
@@ -49,7 +49,7 @@ const Content: FunctionComponent<{ wikiService: IWikipediaService }> = ({ wikiSe
                     </Card.Body>
                 </Card>
             </Col>
-            <Col md="4" >
+            <Col md="4" sm="12" className="mt-2">
                 <Row>
                     <Col> <Card>
                         <Card.Header as="h5" className="bg-info text-light">{(title ? "Similar " : "Sample ") + "Titles"}</Card.Header>
