@@ -1,6 +1,5 @@
 ## Fast Wiki
  It fetches quick summary and related titles using the MediaWiki (Wikipedi Api).
- > You can look at the app on [this page](https://fast-wiki.herokuapp.com/Albert_Einstein)
 ### Used technologies
  - [react](https://reactjs.org/)
  - [react-bootstrap](https://react-bootstrap.github.io/)
