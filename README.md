@@ -1,5 +1,7 @@
 ## Fast Wiki
  It fetches quick summary and related titles using the MediaWiki (Wikipedi Api).
+ 
+ **Website:** [https://aliyildizoz.github.io/fast-wiki/](https://aliyildizoz.github.io/fast-wiki/)
 ### Used technologies
  - [react](https://reactjs.org/)
  - [react-bootstrap](https://react-bootstrap.github.io/)
