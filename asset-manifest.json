@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fast-wiki/static/css/main.f9c66b1b.css",
+    "main.js": "/fast-wiki/static/js/main.16bf6c53.js",
+    "static/js/453.81d132ef.chunk.js": "/fast-wiki/static/js/453.81d132ef.chunk.js",
+    "index.html": "/fast-wiki/index.html",
+    "main.f9c66b1b.css.map": "/fast-wiki/static/css/main.f9c66b1b.css.map",
+    "main.16bf6c53.js.map": "/fast-wiki/static/js/main.16bf6c53.js.map",
+    "453.81d132ef.chunk.js.map": "/fast-wiki/static/js/453.81d132ef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9c66b1b.css",
+    "static/js/main.16bf6c53.js"
+  ]
+}
