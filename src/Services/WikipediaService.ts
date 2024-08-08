@@ -56,6 +56,7 @@ export default class WikipediaService implements IWikipediaService {
                     pageRes.IsExistsImage = (await image).IsExistsMatch;
                 }
             }
+            pageRes.SearchComplete = true;
 
             pageRes.PageModel.SimilarTitles = this.ArrayUnique([...(await search).Results, ...psSearch]);
             return pageRes;
