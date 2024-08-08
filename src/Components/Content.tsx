@@ -55,7 +55,7 @@ const Content: FunctionComponent<{ wikiService: IWikipediaService }> = ({ wikiSe
                         <Card.Header as="h5" className="bg-info text-light">{(title ? "Similar " : "Sample ") + "Titles"}</Card.Header>
                         <Card.Body className="pr-1 pl-2" >
                             <Card.Text>
-                                {!pageResponse.IsExistsMatch && title ? <i>Loading...</i> :
+                                {!pageResponse.IsExistsMatch && !pageResponse.SearchComplete && title ? <i>Loading...</i> :
                                     pageResponse.PageModel.SimilarTitles.length > 0 ? pageResponse.PageModel.SimilarTitles.map((val: SearchModel) => {
                                         return <Link className="d-inline-flex  text-decoration-none" to={"/" + encodeURIComponent(val.Title.replaceAll(" ", "_"))} key={val.PageId}>
                                             <Badge data-toggle="tooltip" title={val.Title} variant="light similartitle mr-2" >{val.Title.length > 35 ? val.Title.slice(0, 32) + "..." : val.Title}</Badge>
