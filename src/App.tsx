@@ -28,7 +28,7 @@ function App() {
       <Header />
       <BrowserRouter>
         <Switch>
-          <Route path="/:title" render={(route) => <Home route={route} WikiService={wikiService} />} />
+          <Route path="/fast-wiki/:title" render={(route) => <Home route={route} WikiService={wikiService} />} />
           <Route path="/" render={(route) => <Home route={route} WikiService={wikiService} />} />
         </Switch>
       </BrowserRouter>

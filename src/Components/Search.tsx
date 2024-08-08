@@ -32,10 +32,13 @@ export default class Home extends React.Component<IProps, IState> {
     }
 
     onChange = (event: any, { newValue, method }: { newValue: string, method: string }) => {
+        console.log(this.state,newValue)
         this.setState({
             ...this.state,
             query: newValue
         }, () => {
+        console.log(this.state,newValue)
+
             if (method === "click") {
                 this.redirectContent();
             }
@@ -63,7 +66,7 @@ export default class Home extends React.Component<IProps, IState> {
         event.preventDefault();
         this.redirectContent()
     }
-    redirectContent = () => this.state.query !== "" ? this.props.history.push("/" + encodeURIComponent(this.state.query.replaceAll(" ", "_"))) : null;
+    redirectContent = () => this.state.query !== "" ? this.props.history.push("/fast-wiki/" + encodeURIComponent(this.state.query.replaceAll(" ", "_"))) : null;
     onSuggestionsClearRequested = () => {
         this.setState({
             searchRes: []
